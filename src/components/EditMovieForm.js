@@ -36,6 +36,13 @@ const EditMovieForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.put(`http://localhost:9000/api/movies/${id}`, movie)
+      .then(res => {
+        setMovies
+      })
+      .catch(err => {
+        console.log(err)
+      })
     // Make your put request here
     // On success, set the updated movies in state
     // and also navigate the app to the updated movie path
