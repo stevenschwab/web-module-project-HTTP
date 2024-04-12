@@ -43,7 +43,7 @@ You should now have your app running in Chrome on `http://localhost:3000`
 
 - [x] Next, we need to grab the id being passed into the component through the url. Use the `useParams` hook to get the id value.
 
-- [ ] We need to be able to load in the current movie's attributes into our local form state. When `EditMovieForm` mount, retrieve our current id's movie from the api and save the data returned to local state.
+- [x] We need to be able to load in the current movie's attributes into our local form state. When `EditMovieForm` mount, retrieve our current id's movie from the api and save the data returned to local state.
 
 - [ ] At this point, nothing happens when the edit form is submitted. Add in the api call needed to update the server with our updated movie data.
 
