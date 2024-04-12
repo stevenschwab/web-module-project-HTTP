@@ -49,7 +49,7 @@ const App = (props) => {
           <Routes>
             <Route path="movies/edit/:id" />
 
-            <Route path="movies/:id" />
+            <Route path="movies/:id" element={<Movie />} />
 
             <Route path="movies" element={<MovieList movies={movies} />} />
 
