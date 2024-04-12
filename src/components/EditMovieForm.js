@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const EditMovieForm = (props) => {
+  const { id } = useParams();
   const navigate = useNavigate();
 
   const { setMovies } = props;
