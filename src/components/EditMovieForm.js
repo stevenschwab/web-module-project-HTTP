@@ -8,7 +8,7 @@ const EditMovieForm = (props) => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { setMovies } = props;
+  const { setMovies, movies } = props;
   const [movie, setMovie] = useState({
     title: "",
     director: "",
@@ -38,7 +38,7 @@ const EditMovieForm = (props) => {
     e.preventDefault();
     axios.put(`http://localhost:9000/api/movies/${id}`, movie)
       .then(res => {
-        setMovies
+        setMovies(res.data)
         navigate(`/movies/${id}`)
       })
       .catch(err => {
