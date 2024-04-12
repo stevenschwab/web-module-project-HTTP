@@ -8,7 +8,7 @@ const EditMovieForm = (props) => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { setMovies, movies } = props;
+  const { setMovies } = props;
   const [movie, setMovie] = useState({
     title: "",
     director: "",
@@ -44,9 +44,6 @@ const EditMovieForm = (props) => {
       .catch(err => {
         console.log(err)
       })
-    // Make your put request here
-    // On success, set the updated movies in state
-    // and also navigate the app to the updated movie path
   }
 
   const { title, director, genre, metascore, description } = movie;
