@@ -63,7 +63,7 @@ You should now have your app running in Chrome on `http://localhost:3000`
 
 - [x] Pass down `deleteMovie` into the appropriate component and wire it to a click handler.
 
-- [ ] When your delete request is complete redirect the user to the `/movies` route.
+- [x] When your delete request is complete redirect the user to the `/movies` route.
 
 #### Adding a Movie
 >
