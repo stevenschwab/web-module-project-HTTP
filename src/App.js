@@ -29,7 +29,6 @@ const App = (props) => {
   const deleteMovie = (id) => {
     axios.delete(`http://localhost:9000/api/movies/${id}`)
       .then(res => {
-        debugger
         setMovies(res.data)
         navigate('/movies')
       })
