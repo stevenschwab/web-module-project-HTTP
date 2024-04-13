@@ -59,9 +59,9 @@ You should now have your app running in Chrome on `http://localhost:3000`
 
 - [x] Identify the component that holds the button needed for deletion.
 
-- [ ] In `App.js` complete the `deleteMovie` function, which requests the deletion to the server by movie id, and updates the movies list.
+- [x] In `App.js` complete the `deleteMovie` function, which requests the deletion to the server by movie id, and updates the movies list.
 
-- [ ] Pass down `deleteMovie` into the appropriate component and wire it to a click handler.
+- [x] Pass down `deleteMovie` into the appropriate component and wire it to a click handler.
 
 - [ ] When your delete request is complete redirect the user to the `/movies` route.
 
