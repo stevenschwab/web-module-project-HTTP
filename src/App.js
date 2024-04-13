@@ -38,8 +38,8 @@ const App = (props) => {
       })
   }
 
-  const addToFavorites = (movie) => {
-    // Stretch goal, see the README
+  const addToFavorites = (id, title) => {
+    setFavoriteMovies([...favoriteMovies, { id, title }])
   }
 
   return (
@@ -58,7 +58,7 @@ const App = (props) => {
 
             <Route path="movies/edit/:id" element={<EditMovieForm setMovies={setMovies} />} />
 
-            <Route path="movies/:id" element={<Movie deleteMovie={deleteMovie} />} />
+            <Route path="movies/:id" element={<Movie deleteMovie={deleteMovie} addToFavorites={addToFavorites} />} />
 
             <Route path="movies" element={<MovieList movies={movies} />} />
 
