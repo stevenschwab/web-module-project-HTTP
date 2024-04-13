@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import MovieList from './components/MovieList';
 import Movie from './components/Movie';
 import EditMovieForm from "./components/EditMovieForm";
@@ -14,6 +14,7 @@ import axios from 'axios';
 const App = (props) => {
   const [movies, setMovies] = useState([]);
   const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('http://localhost:9000/api/movies')
@@ -26,6 +27,15 @@ const App = (props) => {
   }, []);
 
   const deleteMovie = (id) => {
+    axios.delete(`http://localhost:9000/api/movies/${id}`)
+      .then(res => {
+        debugger
+        setMovies(res.data)
+        navigate('/movies')
+      })
+      .catch(err => {
+        console.log(err)
+      })
     // Make a DELETE request using Axios
     // On success update the movies list in state
     // and navigate the user to /movies
