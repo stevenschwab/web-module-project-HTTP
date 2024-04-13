@@ -39,7 +39,9 @@ const App = (props) => {
   }
 
   const addToFavorites = (id, title) => {
-    setFavoriteMovies([...favoriteMovies, { id, title }])
+    if ( favoriteMovies.find(movie => movie.id === id) === undefined ) {
+      setFavoriteMovies([...favoriteMovies, { id, title }])
+    }
   }
 
   return (
