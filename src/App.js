@@ -35,10 +35,14 @@ const App = () => {
   }
 
   const addToFavorites = (id, title) => {
-    if ( favoriteMovies.find(movie => movie.id === id) === undefined ) {
-      setFavoriteMovies([...favoriteMovies, { id, title }])
-    }
-  }
+    setFavoriteMovies(prevFavorites => {
+      const newFavorites = new Map(prevFavorites);
+      if (!newFavorites.has(id)) {
+        newFavorites.set(id, title);
+      }
+      return newFavorites;
+    });
+  };
 
   return (
     <div>
