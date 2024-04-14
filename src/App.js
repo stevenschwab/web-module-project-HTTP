@@ -12,7 +12,7 @@ import FavoriteMovieList from './components/FavoriteMovieList';
 
 import axios from 'axios';
 
-const App = (props) => {
+const App = () => {
   const [movies, setMovies] = useState([]);
   const [favoriteMovies, setFavoriteMovies] = useState([]);
   const navigate = useNavigate();
