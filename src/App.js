@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import MovieList from './components/MovieList';
 import Movie from './components/Movie';
