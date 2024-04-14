@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import DeleteMovieModal from './DeleteMovieModal';
 
 import axios from 'axios';
@@ -11,7 +11,6 @@ const Movie = (props) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const { id } = useParams();
-  const navigate = useNavigate();
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
