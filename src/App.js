@@ -10,7 +10,7 @@ import axios from 'axios';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const [favoriteMovies, setFavoriteMovies] = useState(new Map());
   const navigate = useNavigate();
 
   useEffect(() => {
